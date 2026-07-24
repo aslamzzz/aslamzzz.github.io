@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aslam | Personal Space</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,Helvetica,sans-serif;
+}
+
+body{
+background:#09090f;
+color:white;
+line-height:1.6;
+scroll-behavior:smooth;
+}
+
+header{
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
+background:linear-gradient(135deg,#0f172a,#1e293b,#312e81);
+}
+
+h1{
+font-size:4rem;
+}
+
+header p{
+font-size:1.2rem;
+color:#cbd5e1;
+margin-top:15px;
+max-width:700px;
+}
+
+.button{
+margin-top:30px;
+padding:14px 28px;
+background:#3b82f6;
+border-radius:40px;
+color:white;
+text-decoration:none;
+transition:.3s;
+}
+
+.button:hover{
+background:#2563eb;
+}
+
+section{
+max-width:1000px;
+margin:auto;
+padding:80px 20px;
+}
+
+h2{
+margin-bottom:25px;
+color:#60a5fa;
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+.card{
+background:rgba(255,255,255,.05);
+padding:25px;
+border-radius:15px;
+backdrop-filter:blur(8px);
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-8px);
+}
+
+footer{
+padding:40px;
+text-align:center;
+color:#94a3b8;
+border-top:1px solid #333;
+}
+
+.fade{
+opacity:0;
+transform:translateY(40px);
+transition:1s;
+}
+
+.fade.show{
+opacity:1;
+transform:none;
+}
+</style>
+
+</head>
+<body>
+
+<header>
+
+<h1>Aslam</h1>
+
+<p>
+Learning one page at a time.
+Reading books, learning Japanese,
+exploring AI, watching anime,
+playing games, and slowly building my future.
+</p>
+
+<a href="#about" class="button">Explore</a>
+
+</header>
+
+<section id="about" class="fade">
+
+<h2>About Me</h2>
+
+<p>
+Hi, I'm Aslam.
+
+Born in 2005.
+
+I finished my 12th-grade studies in 2023.
+
+I'm currently exploring different interests while trying to improve myself every day.
+
+This website is my little corner of the internet.
+</p>
+
+</section>
+
+<section class="fade">
+
+<h2>Interests</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>📚 Books</h3>
+<p>
+I enjoy reading books that improve my thinking and habits.
+</p>
+</div>
+
+<div class="card">
+<h3>🇯🇵 Japanese</h3>
+<p>
+I'm learning Japanese step by step.
+</p>
+</div>
+
+<div class="card">
+<h3>🤖 AI</h3>
+<p>
+I enjoy exploring AI tools and learning what they can do.
+</p>
+</div>
+
+<div class="card">
+<h3>🎮 Gaming</h3>
+<p>
+Gaming is one of my favorite ways to relax and have fun.
+</p>
+</div>
+
+<div class="card">
+<h3>🎌 Anime</h3>
+<p>
+I enjoy great stories, characters and soundtracks.
+</p>
+</div>
+
+<div class="card">
+<h3>🌱 Growth</h3>
+<p>
+I'm always trying to become a little better than yesterday.
+</p>
+</div>
+
+</div>
+
+</section>
+
+<section class="fade">
+
+<h2>Currently</h2>
+
+<ul>
+
+<li>📖 Reading books</li>
+
+<li>🇯🇵 Learning Japanese</li>
+
+<li>🤖 Exploring AI</li>
+
+<li>💻 Learning web development</li>
+
+<li>🌱 Building better habits</li>
+
+</ul>
+
+</section>
+
+<section class="fade">
+
+<h2>Quote</h2>
+
+<p style="font-size:1.3rem">
+
+"The journey is the destination."
+
+</p>
+
+</section>
+
+<footer>
+
+Made with ❤️ by Aslam
+
+</footer>
+
+<script>
+
+const observer=new IntersectionObserver(entries=>{
+
+entries.forEach(entry=>{
+
+if(entry.isIntersecting){
+
+entry.target.classList.add("show");
+
+}
+
+});
+
+});
+
+document.querySelectorAll(".fade").forEach(el=>observer.observe(el));
+
+</script>
+
+</body>
+  </html>
