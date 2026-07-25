@@ -1,0 +1,17 @@
+---
+layout: default
+title: Home
+---
+<section class="hero">
+    <h2>Hello, I'm <span class="highlight">Your Name</span></h2>
+    <p>I build cool things. This is my blog and portfolio.</p>
+    <a href="#posts" class="btn">See My Work ↓</a>
+</section>
+<section id="posts" class="posts">
+    <h3>Latest Posts</h3>
+    <ul>
+        {% for post in site.posts %}
+        <li><a href="{{ post.url | relative_url }}"><h4>{{ post.title }}</h4><small>{{ post.date | date: "%B %d, %Y" }}</small></a></li>
+        {% endfor %}
+    </ul>
+</section>
